@@ -1,0 +1,173 @@
+@media (max-width: 1023px) {
+    :root {
+        --nav-height: 60px;
+    }
+
+    nav {
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 0 15px;
+        z-index: 1000;
+    }
+
+    nav h1 {
+        font-size: 1.3rem;
+        margin: 0;
+    }
+
+    /* Hamburger Menu Button */
+    nav::after {
+        content: '☰';
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: #2e2e2e;
+        user-select: none;
+        display: block;
+        transition: color 0.3s ease;
+    }
+
+    nav.menu-open::after {
+        content: '✕';
+    }
+
+    nav.scrolled::after {
+        color: #a5d6a7;
+    }
+
+    /* Hide nav ul by default on mobile */
+    nav ul {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: rgba(17, 17, 17, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        margin: 0;
+        font-size: 0.9rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        z-index: 999;
+        border-bottom: 1px solid rgba(165, 214, 167, 0.2);
+    }
+
+    nav.menu-open ul {
+        max-height: 500px;
+    }
+
+    nav ul li {
+        margin: 0;
+        border-bottom: 1px solid rgba(165, 214, 167, 0.1);
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px 30px;
+        color: #a5d6a7;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    nav ul li a:hover {
+        background-color: rgba(165, 214, 167, 0.1);
+        color: #fafafa;
+    }
+
+    /* Cart button styling on mobile */
+    .cart-btn {
+        color: #FF8F00;
+        background-color: transparent;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+        font-weight: 600;
+        margin-left: auto;
+        margin-right: 15px;
+        transition: color 0.3s ease;
+    }
+
+    .cart-btn:hover {
+        color: #a5d6a7;
+    }
+
+    nav.scrolled .cart-btn {
+        color: #FF8F00;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        padding: 150px 30px 50px 30px;
+    }
+
+    header h3 {
+        font-size: 0.95rem;
+        padding: 0 20px 50px 20px;
+    }
+
+    header a{
+        font-size: 0.95rem;
+        padding: 15px 25px;
+    }
+
+    /* Featured Meals Mobile */
+    .featured-meals {
+        padding: 40px 20px;
+    }
+
+    .featured-meals h2 {
+        font-size: 2rem;
+    }
+
+    .featured-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .meals-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .meal-card:hover{
+        transform: none;
+    }
+
+    .meal-image {
+        height: 150px;
+    }
+
+    .meal-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .meal-description {
+        font-size: 0.85rem;
+    }
+
+    .meal-price {
+        font-size: 1.2rem;
+    }
+
+    .add-btn {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+
+    .about-us h1 {
+        font-size: 2rem;
+    }
+
+    .about-us p {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+}

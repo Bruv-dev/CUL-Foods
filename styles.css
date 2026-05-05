@@ -1,0 +1,314 @@
+/* Colour Pallettes Used*/
+
+/*
+Primary: Deep Green #1B5E20
+Accent: Warm Orange #FF8F00
+Background: Off-White #FAFAFA
+Text: Charcoal #2E2E2E
+Secondary Accent: Light Green #A5D6A7
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root{
+    --nav-height: 80px;
+}
+
+body{
+    background-image: url("assets/about-us.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Navigation Bar*/
+nav{
+    background-color: #fafafa;
+    color: #2e2e2e;
+    z-index: 1000;
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    height: var(--nav-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 30px;
+    backdrop-filter: blur(6px);
+    margin: 0;
+    transition: box-shadow 0.5s ease, background 0.5s ease;
+}
+
+nav ul{
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    font-size: 1.1rem;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: #2e2e2e;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+nav h1{
+    font-size: 2.5rem;
+    color: #1b5e20;
+    display: flex;
+    align-items: center;
+}
+
+nav .logo{
+    width: 3.2rem;
+    height: 3.2rem;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.cart-btn{
+    color: #FF8F00;
+    background-color: #fafafa;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+nav svg{
+    width: 1.1rem;
+    height: 1.1rem;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+nav a:hover{
+    color: #FF8F00;
+}
+
+nav.scrolled{
+    background:rgba(17,17,17,0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+nav.scrolled a{
+    color: #a5d6a7;
+}
+
+nav.scrolled a:hover{
+    color: #FAFAFA;
+}
+
+/* Header Section*/
+header{
+    text-align: center;
+    color: #2e2e2e;
+    background-image: url("assets/grilled-food.jpg");
+    background-position: center;
+    background-color: #FF8F00;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+header h1{
+    padding: 150px 0px 100px 0px;
+    font-size: 3.5rem;
+    color: #fafafa;
+}
+
+header h3{
+    padding: 0px 50px 70px 50px;
+    color: #fafafa;
+
+}
+
+header a{
+    background-color: #2e2e2e;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #a5d6a7;
+    padding: 20px;
+    font-size: 1rem;
+    transition: color 0.3s ease, opacity 0.3s ease, font-size 0.3s ease;
+}
+
+header a:hover{
+    color: #FF8F00;
+    opacity: 0.8;
+    font-size: 1.05rem;
+}
+
+/* Featured Meals Section */
+.featured-meals {
+    background-color: #FAFAFA;
+    padding: 80px 20px;
+}
+
+.featured-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-meals h2 {
+    font-size: 2.5rem;
+    color: #1B5E20;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.featured-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+}
+
+.meals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+}
+
+.meal-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.meal-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.meal-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.meal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.meal-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.meal-info h3 {
+    font-size: 1.3rem;
+    color: #1B5E20;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.meal-description {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    line-height: 1.5;
+}
+
+.meal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.meal-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FF8F00;
+}
+
+.add-btn {
+    background-color: #1B5E20;
+    color: #FAFAFA;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-btn:hover {
+    background-color: #2E7D32;
+    transform: scale(1.05);
+}
+
+.add-btn:active {
+    transform: scale(0.98);
+}
+
+.about-us{
+    background: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 100%);
+    color: #2e2e2e;
+    padding: 80px 20px;
+}
+
+.about-container{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-us h1{
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #1b5e20;
+    font-weight: 700;
+}
+
+.about-us p{
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    text-align: justify;
+    color: #2e2e2e;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: #2e2e2e;
+    color: #fafafa;
+}
+
+#contact-us h1{
+    color: #1B5E20;
+    font-size: 2.8rem;
+    text-align: center;
+    padding: 20px;
+}
+
+#contact-us p{
+    font-size: 5rem;
+}
