@@ -76,7 +76,7 @@ nav .logo{
     width: 3.2rem;
     height: 3.2rem;
     vertical-align: middle;
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 .cart-btn{
@@ -115,21 +115,26 @@ header{
     color: #2e2e2e;
     background-image: url("assets/grilled-food.jpg");
     background-position: center;
-    background-color: #FF8F00;
+    background-color: #ff9100aa;
     background-size: cover;
     background-blend-mode: multiply;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
 }
 
 header h1{
-    padding: 150px 0px 100px 0px;
     font-size: 3.5rem;
     color: #fafafa;
 }
 
 header h3{
-    padding: 0px 50px 70px 50px;
+    max-width: 600px;
     color: #fafafa;
-
+    font-weight: 400;
 }
 
 header a{
@@ -139,6 +144,7 @@ header a{
     color: #a5d6a7;
     padding: 20px;
     font-size: 1rem;
+    font-weight: 700;
     transition: color 0.3s ease, opacity 0.3s ease, font-size 0.3s ease;
 }
 
@@ -302,13 +308,268 @@ footer{
     color: #fafafa;
 }
 
-#contact-us h1{
+/* Contact Us Section */
+#contact-us {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8f5e9 100%);
+    padding: 80px 20px;
+    color: #2e2e2e;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#contact-us h1 {
     color: #1B5E20;
     font-size: 2.8rem;
     text-align: center;
-    padding: 20px;
+    margin-bottom: 15px;
+    font-weight: 700;
 }
 
-#contact-us p{
-    font-size: 5rem;
+.contact-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Contact Form Styling */
+.contact-form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-container h2 {
+    color: #1B5E20;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #2e2e2e;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #1B5E20;
+    box-shadow: 0 0 0 3px rgba(27, 94, 32, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    background-color: #FF8F00;
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #E57C00;
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.form-message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
+
+.form-message.success {
+    display: block;
+    background-color: #c8e6c9;
+    color: #2e7d32;
+    border-left: 4px solid #2e7d32;
+}
+
+.form-message.error {
+    display: block;
+    background-color: #ffcdd2;
+    color: #c62828;
+    border-left: 4px solid #c62828;
+}
+
+/* Contact Information */
+.contact-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-info-container h2 {
+    color: #1B5E20;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.info-box {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #FF8F00;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h3 {
+    color: #1B5E20;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-box p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.info-box a {
+    color: #FF8F00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-box a:hover {
+    color: #1B5E20;
+    text-decoration: underline;
+}
+
+/* Social Media Section */
+.social-media {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.social-media h3 {
+    color: #1B5E20;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-link svg {
+    width: 24px;
+    height: 24px;
+}
+
+.social-link.facebook {
+    background-color: #1877F2;
+}
+
+.social-link.facebook:hover {
+    background-color: #0a66c2;
+    transform: scale(1.1);
+}
+
+.social-link.twitter {
+    background-color: #1DA1F2;
+}
+
+.social-link.twitter:hover {
+    background-color: #1a91da;
+    transform: scale(1.1);
+}
+
+.social-link.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-link.instagram:hover {
+    transform: scale(1.1);
+    filter: brightness(0.9);
+}
+
+.social-link.whatsapp {
+    background-color: #25D366;
+}
+
+.social-link.whatsapp:hover {
+    background-color: #20ba5a;
+    transform: scale(1.1);
 }
