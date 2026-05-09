@@ -10,7 +10,7 @@
     <script src="assets/js/script.js" defer></script>
     </head>
     <body>
-        <form id="loginForm">
+        <form id="loginForm" action="connect.php" method="post">
             <div class="form-title">
                 <h1>Sign-in</h1>
                 <a href="index.html">Go back to home page</a>
@@ -37,6 +37,10 @@
             <div class="login-form-group">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
+            </div>
+            <div class="login-form-group">
+                <label for="phone_number">Phone Number:</label>
+                <input type="tel" id="phonenumber" name="phone_number" required>
             </div>
             <div class="login-form-group">
                 <button type="submit" id="submit">Submit</button>
