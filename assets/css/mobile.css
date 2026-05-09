@@ -1,4 +1,4 @@
-@media (max-width: 1023px) {
+@media (max-width: 720px) {
     :root {
         --nav-height: 60px;
     }
@@ -255,26 +255,7 @@
     }
 
     /* Sign In Mobile */
-    #sign-in {
-        padding: 10px;
-    }
-
-    .sign-in-container {
-        max-width: 100%;
-        padding: 20px;
-    }
-
-    .sign-in-container h1 {
-        font-size: 2rem;
-    }
-
-    .sign-in-form {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .form-group {
-        width: 100%;
+    #loginForm{
+        border-radius: 0px;
     }
 }
