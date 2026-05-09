@@ -253,4 +253,28 @@
         width: 20px;
         height: 20px;
     }
+
+    /* Sign In Mobile */
+    #sign-in {
+        padding: 10px;
+    }
+
+    .sign-in-container {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .sign-in-container h1 {
+        font-size: 2rem;
+    }
+
+    .sign-in-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
 }

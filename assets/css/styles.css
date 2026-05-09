@@ -20,7 +20,7 @@ Secondary Accent: Light Green #A5D6A7
 }
 
 body{
-    background-image: url("assets/about-us.jpg");
+    background-image: url("assets/images/about-us.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -113,7 +113,7 @@ nav.scrolled a:hover{
 header{
     text-align: center;
     color: #2e2e2e;
-    background-image: url("assets/grilled-food.jpg");
+    background-image: url("../images/grilled-food.jpg");
     background-position: center;
     background-color: #ff9100aa;
     background-size: cover;
