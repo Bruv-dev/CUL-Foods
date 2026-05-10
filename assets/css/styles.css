@@ -109,6 +109,10 @@ nav.scrolled a:hover{
     color: #FAFAFA;
 }
 
+.sign-in-link{
+    display: hidden;
+}
+
 /* Header Section*/
 header{
     text-align: center;
